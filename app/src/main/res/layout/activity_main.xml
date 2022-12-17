@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5F23DB"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/mass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Вес(кг)"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#280F5C"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/gender_Person"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gender_Person"
+        app:layout_constraintTop_toBottomOf="@+id/gender_Person" />
+
+    <EditText
+        android:id="@+id/gender_Person"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Пол(мужской-1,женский-2)"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#280F5C"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/year_Person"
+        app:layout_constraintStart_toStartOf="@+id/year_Person"
+        app:layout_constraintTop_toBottomOf="@+id/year_Person" />
+
+    <TextView
+        android:id="@+id/logo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:background="#5F23DB"
+        android:text="Калькулятор калорий"
+        android:textColor="#8C9EFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/year_Person"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Возраст(лет)"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#280F5C"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/logo_name"
+        app:layout_constraintStart_toStartOf="@+id/logo_name"
+        app:layout_constraintTop_toBottomOf="@+id/logo_name" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Рост(см)"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#280F5C"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/mass"
+        app:layout_constraintStart_toStartOf="@+id/mass"
+        app:layout_constraintTop_toBottomOf="@+id/mass" />
+
+    <Button
+        android:id="@+id/btnResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#FF9800"
+        android:text="Расчет"
+        android:textColor="#280F5C"
+        app:layout_constraintEnd_toEndOf="@+id/Result"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/Result"
+        app:layout_constraintTop_toBottomOf="@+id/Result" />
+
+    <TextView
+        android:id="@+id/Result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/height"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/height"
+        app:layout_constraintTop_toBottomOf="@+id/height" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
